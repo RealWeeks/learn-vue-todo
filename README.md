@@ -51,7 +51,7 @@ It does not require a domain specific language, such as JSX.
 
 HTML rendered in templates makes for easy conversion of large scale apps.
 
-Assurances to be non-breaking. [Angular backwards compadiblity](https://www.codementor.io/codementorteam/migrating-from-angular-1-x-to-angular-2-upgrade-strategies-a3fgzrhxo)
+Assurances to be non-breaking. [Angular backwards compatibility](https://www.codementor.io/codementorteam/migrating-from-angular-1-x-to-angular-2-upgrade-strategies-a3fgzrhxo)
 
 
 # Getting Started
