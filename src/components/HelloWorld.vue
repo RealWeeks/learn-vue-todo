@@ -1,6 +1,8 @@
 <template>
   <div id="todo">
-    {{todos}}
+    <ol>
+      <li v-for="todo in todos"> {{todo}}</li>
+    </ol>
   </div>
 </template>
 
