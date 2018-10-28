@@ -1,7 +1,7 @@
 <template>
   <div id="todo">
     <ol>
-      <li v-for="todo in todos"> {{todo.title}} <button @click="handleTodos(todo)">Done</button></li>
+      <li v-for="todo in todos"> {{todo.title}} {{todo.completed}} <button @click="handleTodos(todo)">Done</button></li>
     </ol>
   </div>
 </template>

@@ -14,7 +14,7 @@ export default {
   },
   methods:{
     doneTodo(todo){
-      debugger
+      todo.completed = !todo.completed
     }
   },
   data(){
