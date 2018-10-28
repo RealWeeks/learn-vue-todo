@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld :todos="todos" />
+    <HelloWorld @doneTodo="doneTodo" :todos="todos" />
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
   name: 'app',
   components: {
     HelloWorld
+  },
+  methods:{
+    doneTodo(todo){
+      debugger
+    }
   },
   data(){
     return {
