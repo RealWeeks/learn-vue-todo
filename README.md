@@ -1,6 +1,5 @@
 # Vue Overview
 
-
 # Purpose
 
 The purpose of this is to explain vue in simple and easy to understand terms.
@@ -31,6 +30,11 @@ We may lightly and indirectly touch on:
 -   Basic concept of front end frameworks
 -   Javascript
 -   Basic knowledge of ES^
+
+## Before we get Started
+
+If you need any assistance the final code for this project is contained in this
+repo.
 
 ## What is Vue?
 
