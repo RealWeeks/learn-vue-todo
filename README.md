@@ -47,7 +47,7 @@ other framework allows for a faster web experience.
 Vue is unique in that is performs better than many other frameworks including
 React and angular. [Metrics](https://stefankrause.net/js-frameworks-benchmark8/table.html)
 
-It does not require a domain speific language, such as JSX.
+It does not require a domain specific language, such as JSX.
 
 HTML rendered in templates makes for easy conversion of large scale apps.
 
@@ -115,7 +115,7 @@ some data.
 Since our component is imported as `HelloWorld` we can render it inside the
 `<template>` tag as `<HelloWorld/>`.
 
-To pass the `todos` we greated to the component we can use the vue syntax:
+To pass the `todos` we created to the component we can use the vue syntax:
 
 ```vue
 <HelloWorld :todos:="todos" />
@@ -131,7 +131,7 @@ we have rendered it.
 
 ## Props: Rendering todos
 
-The todos we created are being passed to the child component but yet recieved.
+The todos we created are being passed to the child component but yet received.
 To do this we use `props`.  Along with passing the data to the child from
 within the parent we also have to tell the child component to accept the data.
 
@@ -143,13 +143,13 @@ props: ['todos'],
 
 Now in the `<template>` tag we can use `{{todos}}` to render our pass in todos.
 
-You may recognize the handlebars syntax `{{ }}`. Another advanage of vue is
-that it takes the best part other langauges such as the handlebars or moustache
+You may recognize the handlebars syntax `{{ }}`. Another advantage of vue is
+that it takes the best part other languages such as the handlebars or moustache
 syntax.
 
 ## Directives: Conditional Rendering
 
-We've renderd all todos, but lets make a list of todos. We'll do this using
+We've rendered all todos, but let's make a list of todos. We'll do this using
 directives.  The directive we'll be using is `v-for`. Let's refactor our code
 a bit and it should become clear what our directive will be doing.
 
@@ -188,7 +188,7 @@ write the method that the data will be passed to and handle sending it to the
 parent component.
 
 *At this point you may wonder why we're passing data to the parent this is*
-*becuase since we defined our `todos` in the parent doing any changes to the*
+*because since we defined our `todos` in the parent doing any changes to the*
 *data must be done on that level.*
 
 Now let's define our methods object and our `handleTodos` method:
@@ -212,7 +212,7 @@ do some logic on it.  Inside our `handletodo` method add `this.$emit('doneTodo',
 
 This will pass the event to the parent, along with the `todo`.
 
-## Handeling passed actions
+## Handling passed actions
 
 In the child component we emitted the data to the parent. We have to now tell
 the parent to expect the action. In the parent component `<App>` in the line
@@ -253,14 +253,14 @@ This will simply toggle the completed attribute of our todo.
 Vue's reactivity will handle tracking which todo to alter for us, so no need for
 complex logic to pull out the correct `todo` from our `todos` array.
 
-Now on our page we can see the toggeling of the `completed` todo.
+Now on our page we can see the toggling of the `completed` todo.
 
 ## Adding more directives
 
 Now that we can toggle our `todos` lets add some more logic to our child component
 `<HelloWorld>` to make things look a bit better.
 
-We're going to use the vue class binding directive to add a stikethrough to
+We're going to use the vue class binding directive to add a strikethrough to
 our completed todos.
 
 In our child component `<li>` add the following inside the opening tag:
@@ -270,10 +270,10 @@ In our child component `<li>` add the following inside the opening tag:
 ```
 
 This will apply a class `strikethrough` if the `completed` attribute for a `todo`
-element evualatues to `true`. Let's inspect this in the DOM to verify.
+element evaluates to `true`. Let's inspect this in the DOM to verify.
 
 Now in our `<style>` tag lets add `<style scoped>` to prevent our CSS from leaking
-to other components, and set and attribue to the `strikethrough` class:
+to other components, and set and attribute to the `strikethrough` class:
 
 ```css
 .strikethrough{
@@ -284,10 +284,10 @@ to other components, and set and attribue to the `strikethrough` class:
 ## Computeds
 
 Being able to perform complex logic on data is key, but we want to keep this
-logic out of our template because it can quickly become unweidly.
+logic out of our template because it can quickly become unwieldy.
 
-Let's display a list of all the todos that we have completed. (Typcally we would
-create another componet to render this but for ease we're doing to do it in our
+Let's display a list of all the todos that we have completed. (Typically we would
+create another component to render this but for ease we're doing to do it in our
 `App` component).
 
 Let's define a `computed` object and put some code in it to render our completed
@@ -308,7 +308,7 @@ What does the method above do:
 2. returns the result of the filter as `todosDone` which can be accessed anywhere
 in the current component.
 
-Now that we have defined our done todos, lets render it by adding `{{todosDone}}`
+Now that we have defined our done todos, let's render it by adding `{{todosDone}}`
 inside our `App` template.
 
 Now we're rendering our todos.
@@ -318,7 +318,7 @@ _On your own:_ Try to render the completed todos as a list instead of an object.
 ## Watchers
 
 Watchers in vue give us the ability to perform some logic after a piece of data
-we are observing or "watching" has changed. In our case we want to dispay to the
+we are observing or "watching" has changed. In our case we want to display to the
 user everytime a they have completed a todo.
 
 First we need to define a `watcher` object and tell it what to watch, in our `App`
@@ -354,7 +354,7 @@ todoChange: false,
 
 What is happening here?
 1. Everytime the `todosDone` data is changed we fire our watcher.
-2. We created a boolean data attribute called `todoChange` and set it's default
+2. We created a boolean data attribute called `todoChange` and set its default
 state to false.
 3. When our watcher method gets fired we set `todoChange` to true, then 2000 milliseconds
 later we set it back to false.
@@ -367,7 +367,7 @@ new data attribute and watcher we just created by add the following to our templ
 ```
 
 You'll notice we used the `v-if` directive.  The `v-if` directive will only render
-the element if the condition inside the quotes evualatues to `true`.
+the element if the condition inside the quotes evaluates to `true`.
 
 ## Wrap Up
 
