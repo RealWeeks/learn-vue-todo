@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <HelloWorld @doneTodo="doneTodo" :todos="todos" />
+
+    Todos Done:
+    {{todosDone}}
   </div>
 </template>
 
@@ -15,6 +18,11 @@ export default {
   methods:{
     doneTodo(todo){
       todo.completed = !todo.completed
+    }
+  },
+  computed:{
+    todosDone(){
+      return this.todos.filter(x => x.completed)
     }
   },
   data(){
