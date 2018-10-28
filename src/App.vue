@@ -14,7 +14,21 @@ export default {
   },
   data(){
     return {
-      todos:['shopping', 'get gas', 'walk dog']
+      todos:[{
+      "id": 1,
+      "title": "walk dog",
+      "completed": false
+      },
+      {
+      "id": 2,
+      "title": "clean room",
+      "completed": false
+      },
+      {
+      "id": 3,
+      "title": "get gas",
+      "completed": false
+      }]
     }
   }
 }
