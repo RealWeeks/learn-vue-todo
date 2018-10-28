@@ -1,7 +1,7 @@
 <template>
   <div id="todo">
     <ol>
-      <li v-for="todo in todos"> {{todo.title}} {{todo.completed}} <button @click="handleTodos(todo)">Done</button></li>
+      <li v-for="todo in todos" :class="{'strikethrough':todo.completed}"> {{todo.title}} {{todo.completed}} <button @click="handleTodos(todo)">Done</button></li>
     </ol>
   </div>
 </template>
@@ -26,6 +26,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.strikethrough{
+  text-decoration: line-through;
+}
 </style>
