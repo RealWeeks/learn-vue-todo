@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h2 v-if="todoChange">Todo Has changed</h2>
     <HelloWorld @doneTodo="doneTodo" :todos="todos" />
 
     Todos Done:
@@ -22,6 +23,14 @@ export default {
       todo.completed = !todo.completed
     }
   },
+  watch:{
+    todosDone(){
+      this.todoChange = true
+      setTimeout(()=>{
+        this.todoChange = false
+      }, 2000)
+    }
+  },
   computed:{
     todosDone(){
       return this.todos.filter(x => x.completed)
@@ -29,6 +38,7 @@ export default {
   },
   data(){
     return {
+      todoChange:false,
       todos:[{
       "id": 1,
       "title": "walk dog",
