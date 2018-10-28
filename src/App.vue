@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-
+    <HelloWorld :todos="todos" />
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
   name: 'app',
   components: {
     HelloWorld
+  },
+  data(){
+    return {
+      todos:['shopping', 'get gas', 'walk dog']
+    }
   }
 }
 </script>
