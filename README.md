@@ -13,12 +13,6 @@ Some objective we will cover are:
 -   Using Vue Events
 -   Using Vue watchers
 
-We may lightly and indirectly touch on:
-
--   Webpack
--   Bootstrap
--   ES6
-
 
 ## Requirements
 
@@ -380,3 +374,5 @@ We have successfully learned the basic concepts of Vue.
 -  Components
 
 For further information and resources check out [Vue.js](https://vuejs.org/)
+
+Also available on [Medium](https://medium.com/@weeksjasons/vue-js-in-30-minutes-c001476db92)
