@@ -3,7 +3,9 @@
     <HelloWorld @doneTodo="doneTodo" :todos="todos" />
 
     Todos Done:
-    {{todosDone}}
+    <ul>
+      <li v-for="todo in todosDone">{{todo.title}}</li>
+    </ul>
   </div>
 </template>
 
