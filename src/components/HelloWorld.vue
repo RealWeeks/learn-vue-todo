@@ -1,6 +1,6 @@
 <template>
   <div id="todo">
-    todo
+    {{todos}}
   </div>
 </template>
 
@@ -8,6 +8,7 @@
 
 export default {
   name: 'todo',
+  props:['todos'],
   components: {
 
   },
