@@ -76,7 +76,7 @@ First we're going to remove some of this starter code. So clear out everything
 from `HelloWorld.vue`, the CSS inside `App.vue`, as well as everything inside
 the `<div>` tags.
 
-For now We'll also seed some initial in our main `App.vue` component like so:
+For now We'll also seed some initial data in our main `App.vue` component like so:
 
 ```js
 data(){
@@ -112,7 +112,7 @@ Since our component is imported as `HelloWorld` we can render it inside the
 To pass the `todos` we created to the component we can use the vue syntax:
 
 ```vue
-<HelloWorld :todos:="todos" />
+<HelloWorld :todos="todos" />
 ```
 
 The above says "pass in the data todos [the right side] can call it todos in the
