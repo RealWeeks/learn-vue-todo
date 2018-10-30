@@ -165,7 +165,7 @@ available within the `v-for` block with the name assigned to it (in this case
 
 ## Events and passing data
 
-Let's add a simple remote button to each of our todos as such:
+Let's add a simple "Done" button to each of our todos as such:
 
 ```HTML
 <li v-for="todo in todos"> {{todo}} <button>Done</button></li>
