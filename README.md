@@ -115,7 +115,7 @@ To pass the `todos` we created to the component we can use the vue syntax:
 <HelloWorld :todos="todos" />
 ```
 
-The above says "pass in the data todos [the right side] can call it todos in the
+The above says "pass in the data todos [the right side] and call it todos in the
 child template [the left side]".
 
 *Think: data down, actions up*
